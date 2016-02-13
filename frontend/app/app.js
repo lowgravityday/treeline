@@ -7,7 +7,6 @@ angular.module('myApp', [
 	'myApp.root',
 	'myApp.home',
 	'myApp.other',
-	'myApp.version',
 ]).
 config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
@@ -16,20 +15,20 @@ config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRou
 	$stateProvider
 		.state('root', {
 			url: '',
-			templateUrl: 'root/root.html',
+			templateUrl: 'modules/root/root.html',
 			controller: 'RootCtrl',
 		});
 	$stateProvider
 		.state('root.home', {
 			url: '/home',
-			templateUrl: 'home/home.html',
+			templateUrl: 'modules/home/home.html',
 			controller: 'HomeCtrl',
 			title: 'Home'
 		});
 	$stateProvider
 		.state('root.other', {
 			url: '/other',
-			templateUrl: 'other/other.html',
+			templateUrl: 'modules/other/other.html',
 			controller: 'OtherCtrl',
 			title: 'Other'
 		});
